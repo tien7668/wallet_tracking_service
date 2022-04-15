@@ -1,0 +1,43 @@
+http:
+  bindAddress: ":8081"
+  mode: release #(debug,release,test)
+  prefix: /api
+blockchain:
+  chains:
+    - chainID: 1
+      api:
+        price: "https://aggregator-api.kyberswap.com/ethereum"
+      subgraph:
+        aggregatorRouter: "https://api.thegraph.com/subgraphs/name/tien7668/devkyberswapggregator"
+        # aggregatorRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/aggregator-router-ethereum"
+        kyberswapRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/dynamic-amm"
+    # - chainID: 56
+    #   api:
+    #     price: "https://aggregator-api.kyberswap.com/bsc"
+    #   subgraph:
+    #     aggregatorRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/aggregator-router-bsc"
+    #     kyberswapRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/dmm-exchange-bsc"
+    # - chainID: 43114
+    #   api:
+    #     price: "https://aggregator-api.kyberswap.com/avalanche"
+    #   subgraph:
+    #     aggregatorRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/aggregator-router-avalanche"
+    #     kyberswapRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/dmm-exchange-avax"
+    # - chainID: 25
+    #   api:
+    #     price: "https://aggregator-api.kyberswap.com/cronos"
+    #   subgraph:
+    #     aggregatorRouter: "https://cronos-subgraph.knstats.com/subgraphs/name/dynamic-amm/aggregator-router-cronos"
+    #     kyberswapRouter: "https://cronos-subgraph.kyberswap.com/subgraphs/name/kyberswap/kyberswap-cronos"
+    # - chainID: 250
+    #   api:
+    #     price: "https://aggregator-api.kyberswap.com/fantom"
+    #   subgraph:
+    #     aggregatorRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/aggregator-router-fantom"
+    #     kyberswapRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/dmm-exchange-ftm"
+    # - chainID: 137
+    #   api:
+    #     price: "https://aggregator-api.kyberswap.com/polygon"
+    #   subgraph:
+    #     aggregatorRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/aggregator-router-polygon"
+    #     kyberswapRouter: "https://api.thegraph.com/subgraphs/name/dynamic-amm/dmm-exchange-matic"
